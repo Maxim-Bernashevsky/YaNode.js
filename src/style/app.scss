@@ -1,0 +1,188 @@
+@font-face {
+    font-family: "NotoSans-Regular";
+    src: url("../assets/fonts/Noto_Sans/NotoSans-Regular.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    font-family: "NotoSans-Regular", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+header, main, footer{
+    box-sizing: border-box;
+    padding: 30px 40px;
+}
+
+header{
+    height: 100px;
+    background-color: #F85A3E;
+    color: #ffffff;
+}
+
+footer{
+    height: 100px;
+    background-color: #f9f9f9;
+}
+
+h1, h2{
+    margin: 0;
+}
+
+.status-error, .status-success, .status-progress{
+    padding: 15px 20px;
+    width: 500px;
+    margin: 15px auto;
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 3px;
+}
+
+.status-progress{
+    border: none;
+    padding: 5px;
+    background-color: transparent;
+}
+
+.status-success{
+    background-color: #eafff4;
+    border: 1px solid #cdf1cf;
+}
+
+.status-error{
+    background-color: #fff5f5;
+    border: 1px solid #ffdfdf;
+}
+
+
+main{
+    min-height: 450px;
+    height: calc(100vh - 200px);
+    text-align: center;
+    background: url(../assets/img/bg_pattern/w60.png) repeat #fff;
+}
+
+form{
+    background-color: #fff;
+    margin-top: 30px;
+    width: 500px;
+    display: inline-block;
+    padding: 20px 35px;
+    border: 1px solid #eaeaea;
+    border-radius: 4px;
+    box-shadow: 0 0 4px 0 #dfdfdf;
+}
+
+input{
+    padding: 5px 8px;
+    width: 100%;
+    display: inline-block;
+    margin: 0 auto 10px;
+    border: 1px solid transparent;
+    border-bottom: 1px solid #ddd;
+    transition: border-bottom .2s ease-in-out;
+    font-family: "NotoSans-Regular", sans-serif;
+    font-size: 1.05em;
+    border-radius: 2px;
+    outline: none;
+}
+
+.error{
+    border: 1px solid red;
+}
+
+input:hover{
+    border-bottom: 1px solid #bbb;
+}
+
+button{
+    font-family: "NotoSans-Regular", sans-serif;
+    font-size: 1.05em;
+    width: 100%;
+    padding: 8px;
+    margin: 20px auto 8px;
+    color: #ffffff;
+    background-color: #a7deff;
+    transition: background-color .2s ease-in-out;
+    border: none;
+    border-radius: 2px;
+    outline: none;
+}
+
+button.active{
+    background-color: #68c7ff;
+}
+
+button.active:hover {
+    background-color: #3eb8ff;
+}
+
+a{
+    color: #0054b9;
+    text-decoration: none;
+    transition: color .1s ease-in-out;
+}
+
+a:hover{
+    color: #cc0000
+}
+
+.copyright{
+    float: right;
+}
+
+/* Placeholder */
+input::-webkit-input-placeholder{
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    color: #999999;
+}
+input::-moz-placeholder{
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    color: #999999;
+}
+input:-moz-placeholder{
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    color: #999999;
+}
+input:-ms-input-placeholder{
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    color: #999999;
+}
+input:focus::-webkit-input-placeholder{
+    opacity: .5;
+}
+input:focus::-moz-placeholder{
+    opacity: .5;
+}
+input:focus:-moz-placeholder{
+    opacity: .5;
+}
+input:focus:-ms-input-placeholder{
+    opacity: .5;
+}
+/* Placeholder */
+
+@media screen and (max-width: 500px) {
+    form{
+        padding: 15px 20px;
+        width: 250px;
+    }
+    footer{
+        text-align: center;
+    }
+    .copyright{
+        margin-top: 5px;
+        display: inline-block;
+        float: none;
+    }
+}

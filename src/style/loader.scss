@@ -1,0 +1,76 @@
+.loader{
+  position: relative;
+  width: 44px;
+  height: 44px;
+  margin: 0 auto;
+}
+
+.loader div{
+  display: inline-block;
+  position: absolute;
+  border-radius: 50%;
+  transition: top linear .3s;
+}
+
+.loader-blue{
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(0deg, #fff, #eee 90%);
+  animation: arB 1.5s infinite linear;
+}
+
+.loader-orange{
+  width: 30px;
+  height: 30px;
+  z-index: 10;
+  top: 6px;
+  left: 5px;
+  animation: arM 3.2s infinite linear;
+  background: linear-gradient(0deg, #d1412d, #f85a3e 2%, #ff8167);
+}
+
+.loader-white{
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  z-index: 11;
+  position: absolute;
+  top: 11px;
+  left: 12px;
+  animation: arS 2.2s infinite linear;
+}
+
+@keyframes arS{
+  0%{
+    transform: scale(1)
+  }
+  50%{
+    transform: scale(.9)
+  }
+  100%{
+    transform: scale(1)
+  }
+}
+
+@keyframes arB{
+  0%{
+    transform: rotate(0deg)
+  }
+  100%{
+    transform: rotate(360deg)
+  }
+}
+
+@keyframes arM{
+  0%{
+    transform: rotate(0deg);
+  }
+  50%{
+    transform: rotate(-180deg);
+  }
+  100%{
+    transform: rotate(-360deg);
+  }
+}

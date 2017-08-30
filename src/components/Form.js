@@ -12,6 +12,7 @@ export default createReactClass({
             phone: '',
             submit: '',
             urlAction: '',
+            focus: false,
         }
     },
 
@@ -135,7 +136,12 @@ export default createReactClass({
         })
     },
 
+    setInfo(val){
+        this.setState({focus: val})
+    },
+
     render() {
+        const showInfo = this.state.focus ? 'show-info' : ''
         return (
             <form
                 action={this.state.urlAction}
@@ -147,24 +153,36 @@ export default createReactClass({
                     id="fio"
                     placeholder="ФИО"
                     type="text"
+                    onFocus={() => this.setInfo(true)}
+                    onBlur={() => this.setInfo(false)}
                     onChange={this.changeInput}
                 />
                 <input
                     id="email"
                     placeholder="Email"
                     type="text"
+                    onFocus={() => this.setInfo(true)}
+                    onBlur={() => this.setInfo(false)}
                     onChange={this.changeInput}
                 />
                 <input
                     id="phone"
                     placeholder="Телефон"
                     type="text"
+                    onFocus={() => this.setInfo(true)}
+                    onBlur={() => this.setInfo(false)}
                     onChange={this.changeInput}
                 />
                 <button
                     id="submitButton"
                     className={this.state.submit}
                     type="submit">Отправить</button>
+
+                <ul id="infoValidate" className={`infoValue ${showInfo}`}>
+                    <li>три слова</li>
+                    <li>домены ya.ru, yandex.ru, yandex.ua, yandex.by, yandex.kz, yandex.com</li>
+                    <li>в формате +7(000)000-00-00, с суммой цифр меньше 31</li>
+                </ul>
             </form>
         )
     },
